@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchases</title>
+  </head>
+  <style>
+     #navbar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: cadetblue;
+      }
+      a {
+        text-decoration: none;
+        color: antiquewhite;
+        font-size: larger;
+        font-family: system-ui;
+        font-weight: unset;
+        
+        letter-spacing: 7px;
+      }
+      h3 {
+        font-weight: unset;
+        color: aliceblue;
+        font-family: system-ui;
+        letter-spacing: 3px;
+      }
+
+
+
+
+
+      
+      #purchased_vouchers{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin: auto;
+        row-gap: 15px;
+      }
+
+      .card{
+        width: 80%;
+        margin: auto;
+      }
+      .card>img{
+        width: 80%;
+      }
+      .card>h4{
+        margin-left: 15px;
+    font-size: large;
+    font-family: monospace;
+    color: cadetblue;
+      }
+  
+  </style>
+  <body>
+    <div id="navbar">
+      <h3 onclick="singupform()">Sign Up</h3>
+      <a href="voucher.html" target="_blank"> Voucher</a>
+      <a href="purchase.html" target="_blank">Purchase</a>
+
+    </div>
+    <!-- Wallet balence id:- "wallet_balance" (only number). -->
+    <!-- - All the purchased voucher will be appended in div with id as "purchased_vouchers".
+  - The remaining balance will show on the page inside h3 tag with id as "balance" -->
+
+  <h3 id="wallet_balance"></h3>
+  <div id="purchased_vouchers"></div>
+  </body>
+</html>
+<script src=scripts\purchase.js></script>

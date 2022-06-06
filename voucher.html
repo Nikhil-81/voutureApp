@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+
+      
+       #navbar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: cadetblue;
+      }
+      a {
+        text-decoration: none;
+        color: antiquewhite;
+        font-size: larger;
+        font-family: system-ui;
+        font-weight: unset;
+        
+        letter-spacing: 7px;
+      }
+      h3 {
+        font-weight: unset;
+        color: aliceblue;
+        font-family: system-ui;
+        letter-spacing: 3px;
+      }
+      
+      
+
+
+
+      #voucher_list{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin: auto;
+        row-gap: 15px;
+      }
+      h4#wallet_balance {
+    font-size: x-large;
+    color: cadetblue;
+    font-family: cursive;
+    margin-left: 44px;
+}
+      .voucher{
+        width: 80%;
+        margin: auto;
+      }
+      .voucher>img{
+        width: 80%;
+      }
+      .voucher>h4,.voucher>button{
+        margin-left: 15px;
+    font-size: large;
+    font-family: monospace;
+    color: cadetblue;
+      }
+      .voucher>button{
+        padding: 0;
+    border: 0px;
+    background: white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <h3 onclick="singupform()">Sign Up</h3>
+      <a href="voucher.html" target="_blank"> Voucher</a>
+      <a href="purchase.html" target="_blank">Purchase</a>
+
+    </div>
+    <!-- Wallet balence id:- "wallet_balance" (only number). -->
+    <!-- - The voucher card will have class :- "voucher".
+  - All the vouchers will be appended inside div with id "voucher_list".
+  - Buy button will have class:- "buy_voucher"
+  - All the purchased voucher will be stored with key :- "purchase". -->
+  <h4 id="wallet_balance"></h4>
+  <div id="voucher_list"></div>
+  </body>
+</html>
+<script src="scripts\voucher.js"></script>
